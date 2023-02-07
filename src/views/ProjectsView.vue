@@ -165,6 +165,10 @@ export default {
   font-size: 70px;
   font-weight: 700;
 }
+
+.mark {
+  color: #cf305f;
+}
 .container-fluid {
     width: 100%;
     min-height: 100vh;

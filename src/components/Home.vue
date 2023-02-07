@@ -9,9 +9,9 @@
                     <a href="">
                         <button class="btn">Download CV</button>
                     </a>
-                    <a href="">
+                    <router-link href="#" to="/contact">
                         <button class="btn ms-5">Hire Me</button>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div class="cols cols1">
@@ -48,7 +48,7 @@ export default {
 
 .container-fluid {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden !important;
     /* background-color: #0f0b0a; */
 }
@@ -61,6 +61,7 @@ export default {
     align-items: center;
     padding: 0 6%;
     overflow: hidden;
+    margin-top: 80px;
 }
 
 .wrapper::before {

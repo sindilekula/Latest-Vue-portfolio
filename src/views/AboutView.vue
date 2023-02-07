@@ -11,9 +11,9 @@
             <h5>Front-end | UX/UI Design</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quaerat quod totam sequi repudiandae atque labore dolor fugit libero reiciendis explicabo magni, alias, id perspiciatis consequatur placeat esse at culpa.</p>
             <div class="buttons">
-              <a target="_blank" href="">
+              <router-link href="#" to="/contact">
                 <button class="btn">Hire Me</button>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

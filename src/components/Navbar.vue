@@ -36,6 +36,9 @@
                     <li class="nav-item">
                         <router-link class="nav-link" href="#" to="/testimonials">Testimonials</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" href="#" to="/contact">Contact</router-link>
+                    </li>
                 </ul>
                 <span class="navbar-text">
                     <div class="socials">
