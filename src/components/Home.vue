@@ -1,23 +1,25 @@
 <template>
   <div class="container-fluid">
         <div class="wrapper">
-            <div class="cols cols0">
-                <span class="top">Hello</span>
-                <h1>I'm a <span class="multitext">Full Stack Web Developer</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veniam consectetur quibusdam fugiat fugit, temporibus rerum corporis dolore aspernatur similique modi harum exercitationem iusto deleniti alias sint sit dolorem ipsam?</p>
-                <div class="buttons">
-                    <a href="">
-                        <button class="btn">Download CV</button>
-                    </a>
-                    <router-link href="#" to="/contact">
-                        <button class="btn ms-5">Hire Me</button>
-                    </router-link>
+            <div class="row">
+                <div class="col-lg-7">
+                    <span class="top">Hello</span>
+                    <h1>I'm a <span class="multitext">Front End Web Developer</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veniam consectetur quibusdam fugiat fugit, temporibus rerum corporis dolore aspernatur similique modi harum exercitationem iusto deleniti alias sint sit dolorem ipsam?</p>
+                    <div class="buttons">
+                        <a href="" id="download">
+                            <button class="btn">Download CV</button>
+                        </a>
+                        <router-link href="#" to="/contact">
+                            <button class="btn">Hire Me</button>
+                        </router-link>
+                    </div>
                 </div>
-            </div>
-            <div class="cols cols1">
-                <div class="img-card">
-                    <img src="../assets/Untitled_design-removebg-preview.png" id="decor">
-                    <!-- <img src="./images/Sindile__2_-removebg-preview.png" id="me"> -->
+                <div class="col-lg-5">
+                    <div class="img-card">
+                        <img src="../assets/Untitled_design-removebg-preview.png" id="decor">
+                        <!-- <img src="./images/Sindile__2_-removebg-preview.png" id="me"> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,7 +50,7 @@ export default {
 
 .container-fluid {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden !important;
     /* background-color: #0f0b0a; */
 }
@@ -67,8 +69,8 @@ export default {
 .wrapper::before {
     position: absolute;
     content: '';
-    height: 500px;
-    width: 500px;
+    min-height: 500px;
+    min-width: 500px;
     border-radius: 50%;
     left: -10%;
     top: 80%;
@@ -97,7 +99,7 @@ export default {
     width: 50%;
 }
 
-.cols0 {
+.cols-lg-7 {
     z-index: 5;
 }
 
@@ -120,26 +122,29 @@ export default {
 
 h1 {
     display: block;
-    font-size: 90px;
+    font-size: 55px;
     font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .multitext {
     text-transform: capitalize;
-    font-size: 55px;
+    font-size: 90px;
     font-weight: 600;
     color: #cf305f;
 }
 
 p {
     display: block;
-    width: 90%;
+    width: 100%;
     font-size: 20px;
+    /* margin-top: 50px; */
     color: grey;
 }
 
-.hire {
-    margin-left: 30px;
+a#download {
+    margin-right: 40px;
 }
 
 button {
@@ -200,6 +205,43 @@ button:hover {
     filter: saturate(200%);
 }
 
+@media screen and (max-width: 1583px) {
+    .wrapper {
+        min-height: 100vh;
+    }
+    .wrapper::before {
+        display: none !important;
+    }
+    .col-lg-5 {
+        display: none;
+    }
+    .col-lg-7 {
+        width: fit-content;
+    }
+
+}
+
+@media screen and (max-width: 548px) {
+    .multitext {
+    font-size: 60px;
+}
+}
+
+@media screen and (max-width: 499px) {
+    a#download {
+        margin-right: 0px;
+    }
+     .wrapper::after {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 399px) {
+    .col-lg-7 {
+        margin-top: 70px;
+    }
+}
 
 
 </style>

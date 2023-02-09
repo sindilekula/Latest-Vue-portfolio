@@ -42,9 +42,9 @@
                 </ul>
                 <span class="navbar-text">
                     <div class="socials">
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a target="_blank" href="https://github.com/sindilekula"><i class="fa-brands fa-github" data-toggle="tooltip" data-placement="top" title="Github"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/sindile-kula-2b777a238/"><i class="fa-brands fa-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"></i></a>
+                        <a target="_blank" href="https://codepen.io/your-work"><i class="fa-brands fa-codepen" data-toggle="tooltip" data-placement="top" title="Codepen"></i></a>
                         <!-- <a href=""><i class="fa-brands fa-linkedin"></i></a> -->
                     </div>
                 </span>
