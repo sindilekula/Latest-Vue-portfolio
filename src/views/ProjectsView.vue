@@ -21,7 +21,7 @@
                             <button class="btn btn-rounded-circle">Github</button>
                         </a>
                         <a target="_blank" href="https://storied-parfait-aaceea.netlify.app">
-                            <button class="btn btn-rounded-circle ms-4">Live</button>
+                            <button class="btn btn-rounded-circle">Live</button>
                         </a>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                             <button class="btn btn-rounded-circle">Github</button>
                         </a>
                         <a target="_blank" href="https://thriving-daffodil-5eb93c.netlify.app/">
-                            <button class="btn btn-rounded-circle ms-4">Live</button>
+                            <button class="btn btn-rounded-circle">Live</button>
                         </a>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                             <button class="btn btn-rounded-circle">Github</button>
                         </a>
                         <a target="_blank" href="https://astounding-empanada-bf00c8.netlify.app/">
-                            <button class="btn btn-rounded-circle ms-4">Live</button>
+                            <button class="btn btn-rounded-circle">Live</button>
                         </a>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                             <button class="btn btn-rounded-circle">Github</button>
                         </a>
                         <a target="_blank" href="https://beamish-jalebi-9338bc.netlify.app/">
-                            <button class="btn btn-rounded-circle ms-4">Live</button>
+                            <button class="btn btn-rounded-circle">Live</button>
                         </a>
                     </div>
                 </div>
@@ -109,12 +109,12 @@
                             <button class="btn btn-rounded-circle">Github</button>
                         </a>
                         <a target="_blank" href="">
-                            <button class="btn btn-rounded-circle ms-4">Live</button>
+                            <button class="btn btn-rounded-circle">Live</button>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class='card' id="sixth" style="background-image: url(https://i.postimg.cc/wT53RpxD/propertylisting.png);">
+            <div class='card' id="sixth" style="background-image: url(https://i.postimg.cc/wT53RpxD/propertylisting.png); background-size: cover;">
                 <div class='info'>
                     <h1 class='title'>Property Listing</h1>
                     <p class='description'>Project Details</p>
@@ -131,7 +131,7 @@
                             <button class="btn btn-rounded-circle">Github</button>
                         </a>
                         <a target="_blank" href="https://taupe-entremet-133de5.netlify.app">
-                            <button class="btn btn-rounded-circle ms-4">Live</button>
+                            <button class="btn btn-rounded-circle">Live</button>
                         </a>
                     </div>
                 </div>
@@ -175,6 +175,12 @@ export default {
     /* background-color: #0f0b0a; */
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 button {
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
     width: 100px;
@@ -213,7 +219,7 @@ main {
     border-radius: 16px;
     margin: 0 auto;
     width: 500px;
-    max-width: 100%;
+    /* max-width: 100%; */
     min-height: 500px;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
       0px 5px 8px 0px rgba(0, 0, 0, 0.14),
@@ -226,7 +232,7 @@ main {
 .info {
     position: relative;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     color: white;
     letter-spacing: 2px;
     background-color: grey;
@@ -236,6 +242,8 @@ main {
     transition: transform 0.5s ease-out;
     text-align: left;
     padding-left: 60px;
+    /* padding-right: 30px; */
+    padding-bottom: 20px;
 }
   
 .info:before {
@@ -244,7 +252,7 @@ main {
     position: absolute;
     content: ' ';
     width: 100%;
-    height: 100%;
+    min-height: 500px;
     overflow: hidden;
     background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
     filter: blur(10px);
@@ -336,7 +344,7 @@ h1 {
   color: #cf305f;
 }
 
-@media (min-width:800px) {
+/* @media (min-width:800px) {
     h1 {
       font-size: 4.236em;
       font-weight: 300
@@ -360,5 +368,5 @@ p {
 a {
     color: #e03616;
     text-decoration: none
-}
+} */
 </style>

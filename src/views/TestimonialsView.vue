@@ -163,7 +163,7 @@ body {
     background-position: center;
     background-size: cover;
     background-color: rgba(0,0,0, 0.1);
-    width: 100%;
+    min-width: 100%;
     min-height: 350px;
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
@@ -260,5 +260,15 @@ p b {
 p.details {
     padding: 5px 0px;
     font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .container__profile {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        margin-bottom: 20px;
+    }
 }
 </style>

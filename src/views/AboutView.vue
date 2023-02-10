@@ -647,4 +647,16 @@ p.mt-3 {
   top: 60%;
 }
 }
+
+@media screen and (max-width: 800px) {
+  .container-fluid {
+    margin-top: 80px;
+  }
+  .heading h1 {
+    margin-bottom: 0;
+  }
+  #container, .timeline-start {
+    margin-top: 30px;
+  }
+}
 </style>
