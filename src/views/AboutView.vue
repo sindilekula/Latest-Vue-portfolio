@@ -9,7 +9,7 @@
           <div class="container-text">
             <h2>Web Developer</h2>
             <h5>Front-end | UX/UI Design</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quaerat quod totam sequi repudiandae atque labore dolor fugit libero reiciendis explicabo magni, alias, id perspiciatis consequatur placeat esse at culpa.</p>
+            <p>Recent graduate of Life Choices Coding Academy's Web Development Bootcamp Course, with a focus on Tech Stacks including, but not limited to <span class="pink1">HTML</span>, <span class="pink2">CSS</span>, <span class= "pink3">JavaScript</span>, <span class="pink4">NODE.JS</span>, <span class="pink5">VUE.JS</span>, and <span class="pink6">MySQL</span>. I'm a student intern at Life Choices Studio (LC Studio), where I'm pursuing my <span class="pink7">WORDPRESS</span> & <span class="pink8">PHP</span> learning journey. Also, I am utilizing <span class="pink9">FIGMA</span>, <span class="pink10">PHOTOSHOP</span>, and <span class="pink11">Canva</span> to improve my UX/UI design skills.</p>
             <div class="buttons">
               <router-link href="#" to="/contact">
                 <button class="btn">Hire Me</button>
@@ -275,6 +275,11 @@ export default {
 #container-fluid {
   padding: 0px 30px;
   overflow-x: hidden;
+}
+
+span.pink1, span.pink2, span.pink3, span.pink4, span.pink5, span.pink6, span.pink7, span.pink8, span.pink9, span.pink10, span.pink11 {
+    color: #cf305f;
+    font-size: 25px;
 }
 
 button {
@@ -548,6 +553,14 @@ p.mt-3 {
 .timeline-article .middle .arrow .fa-solid {
   margin-top: 15px;
 }
+
+.content-right-container, .content-left-container {
+  transition: transform .9s ease-in-out;
+}
+.content-right-container:hover,.content-left-container:hover {
+  transform: scale(1.1);
+}
+
 /*===== // Vertical Timeline =====*/
 
 /*===== Resonsive Vertical Timeline =====*/
@@ -589,15 +602,17 @@ p.mt-3 {
   padding: 10px 25px;
   min-height: 65px;
 }
-  .timeline-article .content-left:before {
-    content: "\f0d9";
-    right: auto;
-    left: -8px;
-  }
-  .timeline-article .content-right:before {
-    display: none;
-  }
+.timeline-article .content-left:before {
+  content: "\f0d9";
+  right: auto;
+  left: -8px;
 }
+.timeline-article .content-right:before {
+  display: none;
+}
+}
+
+
 @media only screen and (max-width: 400px) {
 .timeline-article p {
    margin: 0;

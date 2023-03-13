@@ -5,7 +5,7 @@
                 <div class="col-lg-7">
                     <span class="top">Hello</span>
                     <h1>I'm a <span class="multitext">Front End Web Developer</span></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veniam consectetur quibusdam fugiat fugit, temporibus rerum corporis dolore aspernatur similique modi harum exercitationem iusto deleniti alias sint sit dolorem ipsam?</p>
+                    <p>Recent graduate of Life Choices Coding Academy's Web Development Bootcamp Course, with a focus on Tech Stacks including, but not limited to <span class="pink1">HTML</span>, <span class="pink2">CSS</span>, <span class= "pink3">JavaScript</span>, <span class="pink4">NODE.JS</span>, <span class="pink5">VUE.JS</span>, and <span class="pink6">MySQL</span>. I'm a student intern at Life Choices Studio (LC Studio), where I'm pursuing my <span class="pink7">WORDPRESS</span> & <span class="pink8">PHP</span> learning journey. Also, I am utilizing <span class="pink9">FIGMA</span>, <span class="pink10">PHOTOSHOP</span>, and <span class="pink11">Canva</span> to improve my UX/UI design skills.</p>
                     <div class="buttons">
                         <a href="" id="download">
                             <button class="btn">Download CV</button>
@@ -18,7 +18,6 @@
                 <div class="col-lg-5">
                     <div class="img-card">
                         <img src="../assets/Untitled_design-removebg-preview.png" id="decor">
-                        <!-- <img src="./images/Sindile__2_-removebg-preview.png" id="me"> -->
                     </div>
                 </div>
             </div>
@@ -52,7 +51,6 @@ export default {
     width: 100%;
     min-height: 100vh;
     overflow: hidden !important;
-    /* background-color: #0f0b0a; */
 }
 
 .wrapper {
@@ -88,6 +86,13 @@ export default {
     background: linear-gradient(45deg, #cf305f,grey);
     animation: object2 10s linear infinite;
 }
+
+span.pink1, span.pink2, span.pink3, span.pink4, span.pink5, span.pink6, span.pink7, span.pink8, span.pink9, span.pink10, span.pink11 {
+    color: #cf305f;
+    font-size: 25px;
+}
+
+
 @keyframes object2 {
     50%{
         left: 0%;
@@ -139,7 +144,6 @@ p {
     display: block;
     width: 100%;
     font-size: 20px;
-    /* margin-top: 50px; */
     color: grey;
 }
 
