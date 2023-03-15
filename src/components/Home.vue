@@ -4,8 +4,12 @@
             <div class="row">
                 <div class="col-lg-7">
                     <span class="top">Hello</span>
-                    <h1>I'm a <span class="multitext">Front End Web Developer</span></h1>
-                    <p>Recent graduate of Life Choices Coding Academy's Web Development Bootcamp Course, with a focus on Tech Stacks including, but not limited to <span class="pink1">HTML</span>, <span class="pink2">CSS</span>, <span class= "pink3">JavaScript</span>, <span class="pink4">NODE.JS</span>, <span class="pink5">VUE.JS</span>, and <span class="pink6">MySQL</span>. I'm a student intern at Life Choices Studio (LC Studio), where I'm pursuing my <span class="pink7">WORDPRESS</span> & <span class="pink8">PHP</span> learning journey. Also, I am utilizing <span class="pink9">FIGMA</span>, <span class="pink10">PHOTOSHOP</span>, and <span class="pink11">Canva</span> to improve my UX/UI design skills.</p>
+                    <h1>I'm a 
+                        <span class="typed-text">{{ typeValue }}</span>
+                        <span class="blinking-cursor">|</span>
+                        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+                    </h1>
+                    <p>Recent graduate of Life Choices Coding Academy's Web Development Bootcamp Course, which focuses on Tech Stacks including, but not limited to <span class="pink1">HTML</span>, <span class="pink2">CSS</span>, <span class= "pink3">JavaScript</span>, <span class="pink4">NODE.JS</span>, <span class="pink5">VUE.JS</span>, and <span class="pink6">MySQL</span>. I'm a student intern at Life Choices Studio (LC Studio), where I'm pursuing my <span class="pink7">WORDPRESS</span> & <span class="pink8">PHP</span> learning journey. Also, I am utilizing <span class="pink9">FIGMA</span>, <span class="pink10">PHOTOSHOP</span>, and <span class="pink11">Canva</span> to improve my UX/UI design skills.</p>
                     <div class="buttons">
                         <a href="" id="download">
                             <button class="btn">Download CV</button>
@@ -30,8 +34,57 @@ export default {
     name: 'Home',
     props: {
       msg: String
-    }
-}
+    },
+    name: "typeWiriter",
+    data: () => {
+        return {
+            typeValue: "",
+            typeStatus: false,
+            displayTextArray: ["Front-end Developer", "UX/UI Designer", "Freelancer"],
+            typingSpeed: 100,
+            erasingSpeed: 100,
+            newTextDelay: 2000,
+            displayTextArrayIndex: 0,
+            charIndex: 0,
+        };
+    },
+    props: {},
+    created() {
+        setTimeout(this.typeText, this.newTextDelay + 200);
+    },
+    methods: {
+    typeText() {
+      if (this.charIndex < this.displayTextArray[this.displayTextArrayIndex].length) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue += this.displayTextArray[this.displayTextArrayIndex].charAt(
+          this.charIndex
+        );
+        this.charIndex += 1;
+        setTimeout(this.typeText, this.typingSpeed);
+      } else {
+        this.typeStatus = false;
+        setTimeout(this.eraseText, this.newTextDelay);
+      }
+    },
+    eraseText() {
+      if (this.charIndex > 0) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue = this.displayTextArray[this.displayTextArrayIndex].substring(
+          0,
+          this.charIndex - 1
+        );
+        this.charIndex -= 1;
+        setTimeout(this.eraseText, this.erasingSpeed);
+      } else {
+        this.typeStatus = false;
+        this.displayTextArrayIndex += 1;
+        if (this.displayTextArrayIndex >= this.displayTextArray.length)
+          this.displayTextArrayIndex = 0;
+        setTimeout(this.typeText, this.typingSpeed + 1000);
+      }
+    },
+  },
+};
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
@@ -87,6 +140,60 @@ export default {
     animation: object2 10s linear infinite;
 }
 
+.blinking-cursor {
+  font-size: 6rem;
+  color: #2c3e50;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
+}
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
+}
+@-webkit-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
+}
+@-ms-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
+}
+@-o-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
+}
 span.pink1, span.pink2, span.pink3, span.pink4, span.pink5, span.pink6, span.pink7, span.pink8, span.pink9, span.pink10, span.pink11 {
     color: #cf305f;
     font-size: 25px;
@@ -130,10 +237,10 @@ h1 {
     font-size: 55px;
     font-weight: 400;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
-.multitext {
+.typed-text {
     text-transform: capitalize;
     font-size: 90px;
     font-weight: 600;
