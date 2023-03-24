@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="container__info">
-                    <p class="message">"Sindile Kula, His dedication to his profession is absolutely extraordinary. He is a pleasure to deal with and constantly prioritizes his clients."</p>
+                    <p class="message">"Kula Sindile, an individual who is dedicated and motivated to attain his objectives at whatever costs. He is dependable and works well with others."</p>
                 </div>
             </div>   
         </div>

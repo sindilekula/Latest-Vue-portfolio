@@ -11,7 +11,7 @@
                     </h1>
                     <p>Recent graduate of Life Choices Coding Academy's Web Development Bootcamp Course, which focuses on Tech Stacks including, but not limited to <span class="pink1">HTML</span>, <span class="pink2">CSS</span>, <span class= "pink3">JavaScript</span>, <span class="pink4">NODE.JS</span>, <span class="pink5">VUE.JS</span>, and <span class="pink6">MySQL</span>. I'm a student intern at Life Choices Studio (LC Studio), where I'm pursuing my <span class="pink7">WORDPRESS</span> & <span class="pink8">PHP</span> learning journey. Also, I am utilizing <span class="pink9">FIGMA</span>, <span class="pink10">PHOTOSHOP</span>, and <span class="pink11">Canva</span> to improve my UX/UI design skills.</p>
                     <div class="buttons">
-                        <a href="" id="download">
+                        <a href="https://drive.google.com/uc?export=download&id=1SaR5Rn65VAHo2qwm-oqWYGYOrfywDSc8" id="download">
                             <button class="btn">Download CV</button>
                         </a>
                         <router-link href="#" to="/contact">
